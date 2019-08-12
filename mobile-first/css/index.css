@@ -148,35 +148,86 @@ h5 {
   margin-bottom: 15px;
 }
 
-/* Stretch Goal 2 start*/
+/* Stretch Goal 2 */
 h4 {
   font-family: "Righteous", cursive;
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
-/* Stretch Goal 2 start*/
 
 /* Your code starts here! */
-/* body * {
-  border: 2px solid red;
-} */
-
 .container {
-  width: 800px;
-  margin: auto;
+  width: 100vw;
+  margin: 0;
 }
 
-header {
+p,
+a,
+h4 {
+  font-size: 2em;
+}
+.header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: column-reverse;
 }
-
+header nav {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 0;
+}
 header nav a {
-  width: 70%;
-  margin: 20px;
+  margin: 0;
   text-decoration: none;
   color: black;
+  text-align: center;
+  width: 100%;
+  border-style: solid;
+  border-color: black;
+  border-width: 0px 0px 1px 0px;
+  padding: 20px 0;
+}
+
+.cta-text {
+  width: 100%;
+  margin: 30px 4%;
+}
+
+.cta div.header {
+  display: none;
+}
+.main-content {
+  margin: 4% 0;
+  padding: 0 4%;
+}
+.main-content div.middle-img {
+  background-image: url("../img/mid-page-accent.jpg");
+  width: 100%;
+  height: 132px;
+}
+.contact {
+  margin: 4% 4%;
+}
+
+header nav a:first-child {
+  border-width: 1px 0px 1px 0px;
+}
+
+.top-content .text-content {
+  margin: 4% 0;
+}
+.bottom-content .text-content {
+  margin: 4% 0;
+}
+
+.features,
+.about,
+.services,
+.product,
+.vision {
+  margin: 9% 0;
+  width: 100%;
 }
 
 .cta {
@@ -187,7 +238,7 @@ header nav a {
 }
 .cta-text {
   text-align: center;
-  width: 47%;
+  width: 100%;
 }
 
 .cta-text h1 {
@@ -201,41 +252,8 @@ header nav a {
   padding: 5px 40px;
 }
 
-.cta div.header {
-  background-image: url("../img/header-img.png");
-  width: 379px;
-  height: 379px;
-}
-
 hr {
   border: 1px solid black;
-}
-
-.top-content .text-content {
-  display: flex;
-  justify-content: space-between;
-}
-.features,
-.about {
-  width: 47%;
-  margin: 25px 0;
-}
-
-.main-content div.middle-img {
-  background-image: url("../img/mid-page-accent.jpg");
-  width: 795px;
-  height: 182px;
-}
-
-.bottom-content .text-content {
-  display: flex;
-  justify-content: space-between;
-}
-.services,
-.product,
-.vision {
-  margin: 25px 0;
-  width: 30%;
 }
 
 footer {
@@ -399,145 +417,76 @@ footer {
   width: 80%;
 }
 
-/*====================== index.html Tablet View ======================*/
+/*====================== index.html Desktop View ======================*/
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
+  .container {
+    width: 800px;
+    margin: auto;
+  }
+
   p,
   a,
   h4 {
-    font-size: 1.2em;
+    font-size: 3rem;
   }
 
   .header {
-    flex-direction: column-reverse;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  header nav {
-    display: flex;
-    margin: 0 4%;
-    width: 100%;
-  }
-
-  .header img {
-    margin: 30px 0;
+  header nav a {
+    text-align: left;
+    width: 70%;
+    padding: 0;
   }
 
   .cta-text {
-    width: 100%;
-    margin: 30px 0;
+    width: 47%;
+    margin: 0;
   }
   .cta div.header {
-    display: none;
-  }
-
-  .main-content {
-    margin: 0 4%;
-  }
-
-  .main-content div.middle-img {
-    width: 100%;
-    height: 132px;
-  }
-
-  .contact {
-    margin: 20px 4%;
+    display: block;
+    background-image: url("../img/header-img.png");
+    width: 379px;
+    height: 379px;
   }
 }
 
-/*====================== index.html Mobile View ======================*/
-@media screen and (max-width: 500px) {
+/*====================== index.html Tablet View ======================*/
+@media screen and (min-width: 500px) {
   p,
   a,
   h4 {
-    font-size: 2em;
+    font-size: 1.5rem;
   }
+
   header nav {
-    flex-direction: column;
-    margin: 0;
+    flex-direction: row;
   }
+
   header nav a {
-    margin: 0;
-    text-align: center;
-    width: 100%;
-    border-style: solid;
-    border-color: black;
-    border-width: 0px 0px 1px 0px;
-    padding: 20px 0;
-  }
-  header nav a:first-child {
-    border-width: 1px 0px 1px 0px;
+    border: none;
   }
 
   .top-content .text-content {
-    flex-direction: column;
-  }
-  .bottom-content .text-content {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
   }
 
   .features,
-  .about,
+  .about {
+    width: 47%;
+  }
+  .bottom-content .text-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .services,
   .product,
   .vision {
-    width: 100%;
-  }
-}
-/*====================== services.html Tablet View ======================*/
-@media screen and (max-width: 800px) {
-  p,
-  a,
-  h3,
-  h2,
-  li,
-  button {
-    font-size: 1.2em;
-  }
-  .services-intro {
-    margin: 20px 4%;
-  }
-  .services-intro img {
-    width: 100%;
-  }
-  .services-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 20px 4%;
-  }
-
-  .services-main div {
-    width: 100%;
-    text-align: center;
-  }
-
-  .services-main div p {
-    text-align: left;
-  }
-  hr {
-    margin: 0 4%;
-  }
-  .services-facts {
-    margin: 20px 4%;
-  }
-}
-/*====================== services.html Mobile View ======================*/
-@media screen and (max-width: 500px) {
-  p,
-  a,
-  h3,
-  h2,
-  li,
-  button {
-    font-size: 2em;
-  }
-  .services-facts-text h2 {
-    text-align: center;
-  }
-  .services-facts-text {
-    width: 100%;
-  }
-  .services-facts img {
-    display: none;
+    width: 30%;
   }
 }
