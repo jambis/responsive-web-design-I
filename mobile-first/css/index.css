@@ -156,6 +156,9 @@ h4 {
 }
 
 /* Your code starts here! */
+.body {
+  font-size: 62.5%;
+}
 .container {
   width: 100vw;
   margin: 0;
@@ -425,10 +428,8 @@ footer {
     margin: auto;
   }
 
-  p,
-  a,
-  h4 {
-    font-size: 3rem;
+  body {
+    font-size: 62.5%;
   }
 
   .header {
@@ -452,6 +453,14 @@ footer {
     width: 379px;
     height: 379px;
   }
+
+  .features,
+  .about,
+  .services,
+  .product,
+  .vision {
+    margin: 0% 0;
+  }
 }
 
 /*====================== index.html Tablet View ======================*/
@@ -459,7 +468,7 @@ footer {
   p,
   a,
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 
   header nav {
